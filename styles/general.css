@@ -1,0 +1,25 @@
+:root {
+  --clr-primary: hsl(215, 51%, 70%);
+  --clr-secondary: hsl(178, 100%, 50%);
+
+  --clr-neutral-900: hsl(217, 54%, 11%);
+  --clr-neutral-800: hsl(216, 50%, 16%);
+  --clr-neutral-600: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-outfit: 'Outfit', sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --fs-400: 1.125rem;
+}
+
+/* General CSS */
+body {
+  font-family: var(--ff-outfit);
+  font-size: var(--fs-400);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
