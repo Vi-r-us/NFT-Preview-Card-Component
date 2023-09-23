@@ -17,9 +17,80 @@
 
 /* General CSS */
 body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
   font-family: var(--ff-outfit);
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
+
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary);
+
+  padding: 1.5rem;
+}
+h1 {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+.highlighted {
+  color: var(--clr-neutral-100);
+}
+
+/* Other CSS */
+.card {
+  background-color: var(--clr-neutral-800);
+  border-radius: 1em;
+  overflow: hidden;
+  padding: 1.625em;
+  flex-direction: column;
+  gap: 1em;
+}
+.overlay {
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.numbers-wrapper {
+  justify-content: space-between;
+}
+.numbers-wrapper p:first-child {
+  color: var(--clr-secondary);
+  &::before {
+    content: url("../images/icon-ethereum.svg");
+    vertical-align: middle;
+    margin-right: .5em;
+  }
+}
+.numbers-wrapper p:last-child {
+  &::before {
+    content: url("../images/icon-clock.svg");
+    vertical-align: middle;
+    margin-right: .5em;
+  }
+}
+
+.avatar-wrapper {
+  align-items: center;
+  gap: 1em;
+}
+
+.line {
+  display: flex;
+  background-color: hsl(215, 29%, 35%);
+  height: 1px;
+}
+
+.avatar {
+  width: 30px;
+  outline: 1px solid var(--clr-neutral-100);
+  border-radius: 50%;
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
