@@ -57,10 +57,7 @@ h1 {
 .overlay {
   position: relative;
   border-radius: .6em;
-  background-color: var(--clr-secondary);
-}
-.overlay > img {
-  border-radius: .5em;
+  overflow: hidden;
 }
 .overlay::before {
   content: url(../images/icon-view.svg);
@@ -110,15 +107,16 @@ h1 {
   width: 30px;
   outline: 1px solid var(--clr-neutral-100);
   border-radius: 50%;
-  transition: all 1s;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
 
 /* Animations and Transitions */
-.txt-hover, .overlay > img, .overlay::before {
-  transition: all 1s ease-in;
+.txt-hover, 
+.avatar,
+.overlay > img, .overlay::before {
+  transition: all .5s ease-in;
 }
 .txt-hover:hover, .txt-hover:focus {
   color: var(--clr-secondary);
@@ -135,6 +133,8 @@ h1 {
 }
 
 .overlay:hover > img {
+  /* Add the blur effect */
+  filter: blur(4px);
   opacity: .6;
 }
 .overlay:hover::before {
