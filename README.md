@@ -1,4 +1,4 @@
-# Social Proof Section
+# NFT Preview Card Category
 
 I created an NFT preview card component, featuring a modern UI design that is responsive across various screen sizes. This project was developed as part of the [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub). To ensure responsiveness, I utilized a flex layout combined with media queries. Additionally, I enhanced the loading experience with webkit animations and implemented Lottie animations using JSON files.
 
