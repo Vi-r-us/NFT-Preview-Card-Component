@@ -57,9 +57,24 @@ h1 {
 .overlay {
   position: relative;
   border-radius: .6em;
-  overflow: hidden;
+  overflow: hidden; 
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
-.overlay::before {
+.overlay img {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+.eye-anim {
+  z-index: 2;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  opacity: 0;
+}
+
+/* .overlay::before {
   content: url(../images/icon-view.svg);
   position: absolute;
   
@@ -71,7 +86,7 @@ h1 {
 
   z-index: 1;
   opacity: 0;
-}
+} */
 
 .numbers-wrapper {
   justify-content: space-between;
@@ -115,9 +130,11 @@ h1 {
 /* Animations and Transitions */
 .txt-hover, 
 .avatar,
-.overlay > img, .overlay::before {
+.overlay > img, 
+.overlay:hover .eye-anim {
   transition: all .5s ease-in;
 }
+
 .txt-hover:hover, .txt-hover:focus {
   color: var(--clr-secondary);
   text-shadow:
@@ -137,6 +154,29 @@ h1 {
   filter: blur(4px);
   opacity: .6;
 }
-.overlay:hover::before {
+.overlay:hover .eye-anim {
   opacity: 1;
+}
+
+.overlay,       
+.card h1,
+.card > p,
+.numbers-wrapper p:first-child,
+.numbers-wrapper p:last-child,
+.line,
+.avatar-wrapper {
+  animation: fadeIn 1s cubic-bezier(.5, 2, 0, 1) ; 
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(50%);
+    clip-path: polygon(0 100%, 100% 100%, 
+      100% 100%, 0% 100%);
+  }
+  to {
+    transform: translateY(0);
+    clip-path: polygon(0 0, 100% 0, 
+      100% 100%, 0% 100%);
+  }
 }
