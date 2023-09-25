@@ -68,7 +68,6 @@ h1 {
   grid-column: 1 / -1;
 }
 .eye-anim {
-  z-index: 2;
   grid-row: 1 / -1;
   grid-column: 1 / -1;
   opacity: 0;
@@ -132,7 +131,7 @@ h1 {
 .avatar,
 .overlay > img, 
 .overlay:hover .eye-anim {
-  transition: all .5s ease-in;
+  transition: all .5s ease-in;  
 }
 
 .txt-hover:hover, .txt-hover:focus {
@@ -165,7 +164,7 @@ h1 {
 .numbers-wrapper p:last-child,
 .line,
 .avatar-wrapper {
-  animation: fadeIn 1s cubic-bezier(.5, 2, 0, 1) ; 
+  animation: fadeIn 1s cubic-bezier(.5, 2, 0, 1); 
 }
 
 @keyframes fadeIn {
